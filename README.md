@@ -42,7 +42,8 @@ lambda/
 
 * Set up and test SAM local lambda development
 * testing?
-
+* create/reference image
+* add semantic numbering to versions
 
 
 #### Resources
