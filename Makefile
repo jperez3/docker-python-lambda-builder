@@ -26,11 +26,11 @@ docker-debug:
 	docker run -it -v $$(pwd)/lambda:/app/lambda 3dna/python-lambda-builder:latest /bin/bash
 
 lambda-upload:
-	aws lambda --profile sandbox-eu update-function-code --function-name python_test3 --zip-file fileb://lambda/lambda.zip
+	aws lambda --profile sandbox update-function-code --function-name python_test --zip-file fileb://lambda/lambda.zip
 
 lambda-invoke:
-	aws lambda --profile sandbox-eu invoke \
-    --function-name=python_test3 \
+	aws lambda --profile sandbox invoke \
+    --function-name=python_test \
     --invocation-type=RequestResponse \
     --payload='{ "test": "value" }' \
     --log-type=Tail \
@@ -40,4 +40,4 @@ lambda-test:
 	make docker-build docker-run lambda-upload lambda-invoke
 
 acm-list:
-	aws acm --profile sandbox-eu list-certificates		
+	aws acm --profile sandbox list-certificates		
