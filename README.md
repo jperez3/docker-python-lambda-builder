@@ -1,7 +1,7 @@
 
 # docker-python-lambda-builder
 
-builds python lambda functions without ec2 instance
+builds python lambda functions without Amazon Linux EC2 instance
 
 
 ## General
@@ -19,7 +19,7 @@ lambda/
 ```
 
     - Run container `make run`
-    - Upload lambda `aws lambda --profile sandbox-eu update-function-code --function-name python_test --zip-file fileb://lambda/lambda.zip`
+    - Upload lambda `aws lambda --profile sandbox update-function-code --function-name python_test --zip-file fileb://lambda/lambda.zip`
 
 
 ##### Container Usage
