@@ -8,7 +8,7 @@ pipeline
     environment 
     {
         VERSION = "latest"
-        REPO_PREFIX = "3dna"
+        REPO_PREFIX = "jperez3"
         PROJECT = "python-lambda-builder"
         REPO = "$REPO_PREFIX/$PROJECT"
         REGION = "us-east-1"
